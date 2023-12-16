@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- FIM GOOGLE FONTES -->
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- FIM BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+
+    <title>8 Ano Vermelho</title>
+</head>
+<body>
+
+    <header>
+        <div class="interface">
+            <div class="logo">
+                <a href="#">
+                    <img src="images/logo.png" alt="Logo do Leonardo Augusto" height=75px width=75px>
+                </a>
+            </div><!--logo-->
+          <div class="cabecalho">
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="#">Jogos</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Projetos</a></li>
+                </ul>
+            </nav>
+          </div>
+          <div class="menu-desktop">                    
+            <div class="btn-contato1">
+              <a>
+                  <button onclick="toggleAnimation(this)">
+                      <div class="sun"></div>
+                      <div class="cloud"></div>
+                      <div class="cloud2"></div>
+                      <div class="star1"></div>
+                      <div class="star2"></div>
+                      <div class="star3"></div>
+                      <div class="star4"></div>
+                      <div class="star5"></div>
+                  </button>
+              </a>
+            </div>
+          </div>
+          <div class="btn-abrir-menu" id="btn-menu">
+              <i class="bi bi-list"></i>
+          </div>
+
+          <div class="menu-mobile" id="menu-mobile">
+              <div class="btn-fechar">
+                  <i class="bi bi-x-lg"></i>
+              </div>
+
+              <nav>
+                  <ul>
+                      <li><a href="#">Início</a></li>
+                      <li><a href="#">Jogos</a></li>
+                      <li><a href="#">Sobre</a></li>
+                      <li><a href="#">Projetos</a></li>
+                  </ul>
+              </nav>
+
+          </div><!--menu-mobile-->
+            <div class="overlay-menu" id="overlay-menu"></div>
+        </div><!--interface-->
+    </header>
+
+    <main>
+      <div class="image">
+        <section class="topo-do-site">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-topo-site">
+                        <h1>LEONARDO AUGUSTO REPRESENTANTE 8º ANO<span>.</span></h1>
+                        <p>Criatividade e inovação andam lado a lado. Com uma combinação única de design impactante, funcionalidade intuitiva e otimização para resultados, estou pronto para criar este ano.</p>
+
+                        <div class="btn-contato">
+                            <a href="#">
+                                <button>Entre em contato</button>
+                            </a>
+                        </div>
+                    </div><!--txt-topo-site-->
+
+                    <div class="img-topo-site">
+                        <img src="images/pessoa.png" alt="">
+                    </div><!--img-topo-site-->
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--topo-do-site-->
+      
+        <section class="especiliadades">
+            <div class="interface">
+                <h2 class="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
+                <div class="flex">
+                    <div class="especialidades-box">
+                        <i class="bi bi-code-square"></i>
+                        <h3> Desenvolvimento de Website</h3>
+                        <p>Sou programador desde 2021, sei bastante de HTML, CSS, PhP, um pouco de Javascripte e tenho certificado da Alura.</p>
+                    </div><!--especialidades-box-->
+
+                    <div class="especialidades-box">
+                      <i class="bi bi-chat-left-text"></i>
+                        <h3 class="titulo">Ajudar <span>sempre</span> que possivel</h3>
+                        <p>Sempre respondendo o mais rápido possivel e ajudando em contéudos quando necessário! Tanto na Escola quanto na minha Casa</p>
+                    </div><!--especialidades-box-->
+
+                    <div class="especialidades-box">
+                      <i class="bi bi-file-text"></i>
+                        <h3>Resumos para Provas</h3>
+                        <p>De vez em quando produzo resumos para facilitar o estudo nas provas, sempre ajudando e deixando partes mais importantes grifadas</p>
+                    </div><!--especialidades-box-->
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--especiliadades-->
+
+        <section class="sobre">
+            <div class="interface">
+                <div class="flex">
+                    <div class="img-sobre">
+                        <img src="images/foto.png" alt="">
+                    </div><!--img-sobre-->
+
+                    <div class="txt-sobre">
+                        <h2>MUITO PRAZER, <span>SOU O LEONARDO AUGUSTO.</span></h2>
+                        <p class="titulo">Olá! Sou o Leonardo, ou só Leo, tenho 13 anos e atualmente sou candidato para representante de sala do 8º Ano, já fui Representante por 2 anos consecutivos em 2022 e 2023, usando como Logo a famosa na sala <span>LA</span>.</p>
+                        <p>Uso isso em tudo e amo muito minha logo, como representante tenho sempre como base alguns projetos de antemão preparados como esse, obrigado por ler.</p>
+                        <div class="btn-social">
+                            <a href="https://www.instagram.com/le0n44rd/"><button><i class="bi bi-instagram"></i></button></a>
+                            <a href="https://github.com/Le0n404rd"><button><i class="bi bi-github"></i></button></a>
+                        </div><!--btn-social-->
+                    </div><!--txt-sobre-->
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--sobre-->
+      </div>
+        <section class="portfolio">
+            <div class="interface">
+                <h2 class="titulo">MEU <span>PORTFÓLIO.</span></h2>
+                <div class="flex">
+                    <div class="img-port" style="background-image: url(images/image1.jpg);">
+                        <div class="overlay">Projeto Desbravando</div>
+                    </div>
+                    <div class="img-port" style="background-image: url(images/image2.jpg);">
+                        <div class="overlay">Projeto Matematicando</div>
+                    </div>
+                    <div class="img-port" style="background-image: url(images/image3.jpg);">
+                        <div class="overlay">Projeto Viajando</div>
+                    </div>
+                </div>
+            </div><!--interface-->
+        </section><!--portfolio-->
+
+    </main>
+
+    <footer>
+        <div class="interface">
+            <div class="line-footer">
+                <div class="flex">
+                    <div class="logo-footer">
+                        <img src="images/logo.png" alt="Logotipo LA" width=85px height=85px>
+                    </div><!--logo-footer-->
+                    <div class="btn-social">
+                        <a href="https://www.instagram.com/le0n44rd/"><button><i class="bi bi-instagram"></i></button></a>
+                        <a href="https://github.com/Le0n404rd"><button><i class="bi bi-github"></i></button></a>
+                    </div><!--btn-social-->
+                </div>
+            </div><!--line-footer-->
+
+            <div class="line-footer borda">
+            </div><!--line-footer-->
+        </div><!--interface-->
+    </footer>
+
+</body>
+</html>
