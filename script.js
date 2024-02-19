@@ -61,16 +61,16 @@ function toggleAnimation(button) {
     // Se clicado, muda o tema para branco e atualiza a imagem da logo
     body.style.backgroundColor = '#ffffff'; // Branco
     header.style.backgroundColor = '#f2f2f2'; // Cinza claro
-    logoImage.style.backgroundImage = 'url(images/logograndeBRA.png)';
-    logo.style.backgroundImage = 'url(images/logoVER.png)';
+    logoImage.style.backgroundImage = 'url(logograndeBRA.png)';
+    logo.style.backgroundImage = 'url(logoVER.png)';
 
     // Nova imagem da logo
   } else {
     // Se não clicado, retorna ao tema original e à imagem original da logo
     body.style.backgroundColor = '#000000'; // Preto
     header.style.backgroundColor = '#080707'; // Cor original do cabeçalho
-    logoImage.style.backgroundImage = 'url(images/logogrande.png)';
-    logo.style.backgroundImage = 'url(images/logo.png)';
+    logoImage.style.backgroundImage = 'url(logogrande.png)';
+    logo.style.backgroundImage = 'url(logo.png)';
     // Imagem original da logo
   }
 }
