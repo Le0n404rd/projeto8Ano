@@ -323,7 +323,7 @@ h3.titulo span {
 
 .logo {
   display: flex;
-  background: url('images/logo.png') center/cover no-repeat;
+  background: url('logo.png') center/cover no-repeat;
   justify-content: center;
   align-items: flex-start;
   width: 74px;
@@ -339,7 +339,7 @@ h3.titulo span {
 .image {
   width: 100%;
   height: 100%;
-  background: url('images/logogrande.png') center/cover no-repeat; /* Substitua o caminho da imagem */
+  background: url('logogrande.png') center/cover no-repeat; /* Substitua o caminho da imagem */
 }
 
 
