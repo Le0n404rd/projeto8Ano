@@ -21,6 +21,7 @@ body {
     display: flex;
 }
 
+/*COMEÇA*/
 .btn-contato1 button {
   position: relative;
   padding: 10px 40px;
@@ -28,22 +29,27 @@ body {
   width: 100px;
   font-size: 18px;
   font-weight: 600;
-  background: rgb(4,6,57);
-  background: linear-gradient(270deg, rgba(4,6,57,1) 12%, rgba(28,32,62,1) 27%, rgba(58,59,54,1) 42%, rgba(12,66,185,1) 57%, rgba(12,135,187,1) 77%);
-  background-size: 300% 100%;
-  border: 0;
+  background: rgb(5,11,24);
+  background: linear-gradient(270deg, rgba(5,11,24,1) 11%, rgba(8,47,64,1) 64%, rgba(48,35,66,1) 91%);
+  background-size: 0% 100%;
   border-radius: 30px;
   overflow: hidden; /* Para esconder as partes que vão além do botão */
   cursor: pointer;
+  border: 0.5px solid #484941;
+}
+
+.btn-contato1 button.clicked {
+  background: rgb(12,66,185);
+  background: linear-gradient(180deg, rgba(12,66,185,1) 11%, rgba(12,135,187,1) 77%, rgba(203,174,63,1) 96%);
 }
 
 .btn-contato1 button.clicked .sun {
-  left: 95%; /* Define a posição final no estado 'clicked' */
-  background-color: #b6a4a4;
-  filter: drop-shadow(0px 0px 9px #eeebe2);
+  left: 95%;
+  background-color: #eeff00;
+  filter: drop-shadow(0px 0px 9px #ffc600);
 }
 
-.btn-contato1 button.clicked .sun::before {
+.btn-contato1 button .sun::before {
   content: '';
   position: absolute;
   top: 5px;
@@ -54,7 +60,11 @@ body {
   border-radius: 50%;
 }
 
-.btn-contato1 button.clicked .sun::after {
+.btn-contato1 button.clicked .sun::before {
+  opacity: 0%;
+}
+
+.btn-contato1 button .sun::after {
   content: '';
   position: absolute;
   top: 15px;
@@ -65,13 +75,16 @@ body {
   border-radius: 50%;
 }
 
-.star1 {
+.btn-contato1 button.clicked .sun::after {
   opacity: 0%;
+}
+
+.star1 {
+  opacity: 100%;
   position: absolute;
-  top: 20%;
-  left: 30%;
-  width: 11px;
-  height: 11px;
+  width: 10px;
+  height: 10px;
+  left: 75%;
   background-color: #ffffff;
   clip-path: polygon(
     50% 0%, 
@@ -88,17 +101,21 @@ body {
   border-radius: 10px;
 }
 
-.btn-contato1 button.clicked .star1 {
-  opacity: 100%
+.btn-contato1 button.clicked .star1,
+.btn-contato1 button.clicked .star2,
+.btn-contato1 button.clicked .star3,
+.btn-contato1 button.clicked .star4,
+.btn-contato1 button.clicked .star5 {
+  opacity: 0%;
 }
 
 .star2 {
-  opacity: 0%;
+  opacity: 100%;
   position: absolute;
   top: 37%;
-  left: 10%;
-  width: 11px;
-  height: 11px;
+  left: 50%; 
+  width: 10px;
+  height: 10px;
   background-color: #ffffff;
   clip-path: polygon(
     50% 0%, 
@@ -113,20 +130,16 @@ body {
     39% 35%
   );
   border-radius: 10px;
-  rotate: 180deg;
-}
-
-.btn-contato1 button.clicked .star2 {
-  opacity: 100%
+  rotate: 139deg;
 }
 
 .star3 {
-  opacity: 0%;
+  opacity: 100%;
   position: absolute;
   top: 71%;
   left: 43%;
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
   background-color: #ffffff;
   clip-path: polygon(
     50% 0%, 
@@ -144,17 +157,13 @@ body {
   rotate: 56deg;
 }
 
-.btn-contato1 button.clicked .star3 {
-  opacity: 100%
-}
-
 .star4 {
-  opacity: 0%;
+  opacity: 100%;
   position: absolute;
   top: 70%;
-  left: 24%;
-  width: 9px;
-  height: 9px;
+  left: 61%;
+  width: 8px;
+  height: 8px;
   background-color: #ffffff;
   clip-path: polygon(
     50% 0%, 
@@ -172,17 +181,13 @@ body {
   rotate: 132deg;
 }
 
-.btn-contato1 button.clicked .star4 {
-  opacity: 100%
-}
-
 .star5 {
-  opacity: 0%;
+  opacity: 100%;
   position: absolute;
   top: 17%;
-  left: 47%;
-  width: 10px;
-  height: 10px;
+  left: 67%;
+  width: 9px;
+  height: 9px;
   background-color: #ffffff;
   clip-path: polygon(
     50% 0%,
@@ -200,91 +205,26 @@ body {
   rotate: 180deg;
 }
 
-.btn-contato1 button.clicked .star5 {
-  opacity: 100%
-}
-
 .btn-contato1 button.clicked .cloud {
-  opacity: 0%; /* Define a opacidade final no estado 'clicked' */
+  opacity: 97%;
 }
 
 .btn-contato1 button.clicked .cloud2 {
-  opacity: 0%; /* Define a opacidade final no estado 'clicked' */
-}
-
-.btn-contato1 button.clicked {
-  background-position: 100% 0%;
+  opacity: 65%;
 }
 
 .cloud,
 .cloud2 {
   position: absolute;
   z-index: 1;
-}
-
-.btn-contato1 button.clicked .sun,
-.btn-contato1 button.clicked .cloud,
-.btn-contato1 button.clicked .cloud2 {
-  animation: none; /* Desativa a animação quando a classe 'clicked' está presente */
-}
-
-@keyframes Night {
-  0% {
-    background-position: 0% 0%;
-  }
-  75% {
-    background-position: 100% 0%;
-  }
-  100% {
-    background-position: 100% 0%;
-  }
-}
-
-@keyframes sunMove {
-  0% {
-    left: 40%;
-  }
-  50% {
-    left: 95%;
-  }
-  75% {
-    background-color: #4a4545;
-  }
-  100% {
-    background-color: #4a4545;
-    left: 95%;
-  }
-}
-
-@keyframes cloudMove {
-  0% {
-    opacity: 97%
-  }
-  50% {
-    opacity: 0%;
-  }
-  100% {
-    opacity: 0%;
-  }
-}
-
-@keyframes cloud2Move {
-  0% {
-    opacity: 65%;
-  }
-  45% {
-    opacity: 0%
-  }
-  100% {
-    opacity: 0%;
-  }
+  opacity: 0%
 }
 
 .sun {
   z-index: 2;
   position: absolute;
   display: flex;
-  background-color: #eeff00;
+  background-color: #b6a4a4;
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -294,21 +234,24 @@ body {
   margin-right: 5px;
   align-items: center;
   justify-content: center;
-  filter: drop-shadow(0px 0px 9px #ffc600);
+  filter: drop-shadow(0px 0px 9px #eeebe2);
 }
 
 .cloud {
   position: absolute;
   width: 30px;
   height: 15px;
-  background: rgb(255,255,255);
-  background: linear-gradient(180deg, rgba(255,255,255,1) 10%, rgba(239,242,166,1) 89%, rgba(212,226,106,1) 98%);
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 10%, rgba(239, 242, 166, 1) 89%, rgba(212, 226, 106, 1) 98%
+  );
   border-radius: 10px;
   margin-right: 4px;
-  margin-left: 19px;
-  margin-top: -3px;
+  margin-left: -18px;
+  margin-top: -2px;
   margin-bottom: 5px;
-  opacity: 97%;
+  opacity: 0%;
 }
 
 .cloud::before {
@@ -329,11 +272,12 @@ body {
   background-color: #ffffff;
   border-radius: 10px;
   margin-right: 4px;
-  margin-left: 5px;
-  margin-top: -8px;
+  margin-left: -25px;
+  margin-top: -7px;
   margin-bottom: 5px;
-  opacity: 65%;
+  opacity: 0%;
 }
+
 .cloud2::before {
   content: '';
   position: absolute;
@@ -344,6 +288,7 @@ body {
   background-color: #ffffff;
   border-radius: 50%;
 }
+
 .btn-contato button {
     padding: 10px 40px;
     font-size: 18px;
@@ -354,7 +299,7 @@ body {
     cursor: pointer;
     transition: .2s;
 }
-
+/* AQUI TERMINA */
 
 h2.titulo {
     color: #fff;
@@ -375,8 +320,10 @@ h3.titulo span {
     text-decoration: underline;
 }
 
+
 .logo {
   display: flex;
+  background: url('images/logo.png') center/cover no-repeat;
   justify-content: center;
   align-items: flex-start;
   width: 74px;
@@ -432,10 +379,8 @@ header nav.menu-desktop ul {
 
 header nav.menu-desktop ul li {
   background-color: transparent;
-  border-width: 1.75px;
-  border-style: solid;
+  border: 1.75px solid #00ff08;
   width: 115px;
-  border-color: #00ff08;
   border-radius: 20px;
   padding: 10px;
   margin-right: 10px;
@@ -455,6 +400,7 @@ header nav.menu-desktop a:hover {
 
 
 /* ESTILO DO MENU MOBILE */
+
 .btn-abrir-menu{
     display: none;
 }
@@ -521,8 +467,6 @@ header nav.menu-desktop a:hover {
     z-index: 88888;
     display: none;
 }
-
-
 /* ESTILO DO TOPO DO SITE */
 section.topo-do-site {
     padding: 40px 4%;
@@ -795,6 +739,7 @@ footer .line-footer p a {
     }
 
     /* RODAPÉ */
+
     footer .flex {
         flex-direction: column;
         gap: 30px;
